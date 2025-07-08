@@ -179,6 +179,7 @@ __ID("@(#) $Id$");
 #define PCI_CLASS_SERIAL_USB         0x0c03
 #define PCI_CLASS_SERIAL_FIBER       0x0c04
 
+#define PCI_CLASS_SPYRE_ACCELERATOR  0x1200
 #define PCI_CLASS_OTHERS             0xff
 
 #define PCI_ADDR_MEM_MASK (~(pciaddr_t) 0xf)
@@ -365,6 +366,8 @@ static const char *get_class_name(unsigned int c)
       return "usb";
     case PCI_CLASS_SERIAL_FIBER:
       return "fiber";
+    case PCI_CLASS_SPYRE_ACCELERATOR:
+      return "accelerator";
   }
 
   switch (c >> 8)
